@@ -1,0 +1,81 @@
+= Architectus
+:description: Master Builder - A knowledge base spanning technology, literature, mathematics, music, and languages
+:keywords: security, infrastructure, automation, literature, mathematics, spanish
+:page-layout: home
+
+[.lead]
+*Architectus* — Latin for "master builder." This site documents a journey of building: systems, understanding, and meaning.
+
+[quote, Miguel de Cervantes Saavedra, Don Quijote]
+____
+"{quote-quijote-identity}"
+____
+
+== Domains of Knowledge
+
+[cols="1,2",options="header"]
+|===
+|Domain |Focus
+
+|xref:technology/index.adoc[**{cat-technology}**]
+|Infrastructure, security, networking, automation, cloud, AI
+
+|xref:literature/index.adoc[**{cat-literature}**]
+|{author-cervantes}, {author-gabo}, {book-rv}
+
+|xref:mathematics/index.adoc[**{cat-mathematics}**]
+|Foundations, applications, patterns
+
+|xref:music/index.adoc[**{cat-music}**]
+|Theory, composition, projects
+
+|xref:languages/index.adoc[**{cat-languages}**]
+|Spanish journey B2→C2, DELE/SIELE preparation
+
+|xref:philosophy/index.adoc[**{cat-philosophy}**]
+|Faith, reason, worldview
+|===
+
+== Philosophy
+
+This site represents the intersection of technical mastery and humanistic depth. Technology alone is insufficient. Literature, mathematics, music, and philosophy provide the foundation for wisdom.
+
+=== Why "Architectus"?
+
+The master builder doesn't just execute — they design, they understand structure, they see patterns across domains:
+
+* **Technology**: Building systems that are secure, resilient, and elegant
+* **Literature**: Understanding the architecture of narrative and meaning
+* **Mathematics**: Grasping the architecture of logic and proof
+* **Music**: Constructing architecture in sound
+* **Languages**: Bridging architectures of thought between cultures
+
+=== Bilingual / Bilingüe
+
+This site is available in both English and Spanish. Much of the literature section is in Spanish, reflecting the source texts.
+
+[.text-center]
+xref:lang/es/index.adoc[**Ver en Español**]
+
+== Recent Additions
+
+// This section will be populated as content is added
+
+[cols="1,2,1"]
+|===
+|Date |Topic |Category
+
+|2026-02-17
+|Site Launch
+|Home
+|===
+
+== Connect
+
+* {link-github}[GitHub]
+* {link-gitlab}[GitLab]
+
+---
+
+[.small]
+_"Yo sé quién soy, y sé que puedo ser..."_ — Don Quijote

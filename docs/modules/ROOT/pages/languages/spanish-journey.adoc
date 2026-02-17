@@ -1,0 +1,92 @@
+= Spanish B2→C2 Journey
+:description: Documenting the path from B2 to C2 Spanish proficiency
+:navtitle: Spanish B2→C2
+
+[.lead]
+From intermediate to mastery — a documented journey.
+
+== Current Level: B2
+
+Achieved B2 (CEFR) proficiency. Now working toward C1 and ultimately C2.
+
+== The Goal: C2
+
+C2 represents mastery:
+
+* Understanding virtually everything heard or read
+* Expressing oneself spontaneously, fluently, and precisely
+* Differentiating finer shades of meaning in complex situations
+
+== Method
+
+=== Immersion Through Literature
+
+* Reading: _{book-quijote}_, {author-gabo}, {book-rv}
+* No translation — dictionary only when necessary
+* Note-taking in Spanish
+
+=== Active Production
+
+* Writing in Spanish (journal, notes, documentation)
+* Speaking with native speakers
+* Teaching others (solidifies knowledge)
+
+=== Formal Study
+
+* DELE/SIELE preparation materials
+* Grammar deep-dives
+* Vocabulary expansion (academic, literary, colloquial)
+
+== Progress Log
+
+// Document progress over time
+
+[cols="1,2,2"]
+|===
+|Date |Activity |Notes
+
+|2026-02
+|B2 certification achieved
+|Ready for C1 preparation
+
+|2026-02
+|Reading: {book-quijote}
+|In progress
+|===
+
+== Challenges
+
+* **False cognates** — Words that look similar but differ in meaning
+* **Subjunctive mastery** — The bane of Spanish learners
+* **Regional variation** — Peninsular vs. Latin American Spanish
+* **Literary register** — 17th century Spanish in Cervantes
+
+== Resources
+
+=== Dictionaries
+* Real Academia Española (RAE)
+* WordReference
+
+=== Literature
+* See xref:literature/index.adoc[Literature section]
+
+=== Certification
+* Instituto Cervantes (DELE)
+* SIELE
+
+== For Other Learners
+
+This journey is documented to:
+
+1. Track my own progress
+2. Help others on the same path
+3. Demonstrate that mastery is achievable
+
+If you're learning Spanish, ánimo. The rewards are worth the effort.
+
+== Related
+
+* xref:languages/index.adoc[Languages Overview]
+* xref:literature/cervantes.adoc[Cervantes]
+* xref:literature/garcia-marquez.adoc[García Márquez]
+* xref:literature/reina-valera.adoc[Reina Valera]

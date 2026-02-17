@@ -1,0 +1,104 @@
+# ============================================================================
+# Architectus - Public Knowledge Base Playbook
+# ============================================================================
+# Central orchestration for public documentation and knowledge sharing.
+#
+# Components:
+#   - home: Landing page and site navigation (this repo)
+#   - technology: IT, security, networking, automation, cloud, AI
+#   - literature: Don Quijote, García Márquez, Reina Valera, classics
+#   - mathematics: Foundations, applications, study notes
+#   - music: Theory, compositions, projects
+#   - languages: Spanish journey B2→C2, resources
+#
+# Bilingual: English (en) and Spanish (es)
+#
+# Usage:
+#   npx antora antora-playbook.yml
+#   # or
+#   make
+#
+# Maintainer: Architectus
+# Repository: architectus-docs
+# Site: https://docs.architectus.dev
+# ============================================================================
+
+site:
+  title: Architectus
+  url: https://docs.architectus.dev
+  start_page: home::index.adoc
+  keys:
+    google_analytics: "" # Add if needed
+
+content:
+  sources:
+    # Hub/Home (this repo)
+    - url: .
+      branches: HEAD
+      start_path: docs
+      edit_url: false
+
+    # Technology (IT, Security, Networking, Automation, Cloud, AI)
+    # - url: https://github.com/EvanusModestus/architectus-technology
+    #   branches: main
+    #   start_path: docs/asciidoc
+    #   edit_url: false
+
+    # Literature (Cervantes, García Márquez, Reina Valera)
+    # - url: https://github.com/EvanusModestus/architectus-literature
+    #   branches: main
+    #   start_path: docs/asciidoc
+    #   edit_url: false
+
+    # Mathematics
+    # - url: https://github.com/EvanusModestus/architectus-mathematics
+    #   branches: main
+    #   start_path: docs/asciidoc
+    #   edit_url: false
+
+    # Music
+    # - url: https://github.com/EvanusModestus/architectus-music
+    #   branches: main
+    #   start_path: docs/asciidoc
+    #   edit_url: false
+
+    # Languages (Spanish B2→C2 journey)
+    # - url: https://github.com/EvanusModestus/architectus-languages
+    #   branches: main
+    #   start_path: docs/asciidoc
+    #   edit_url: false
+
+ui:
+  bundle:
+    # Use default Antora UI for now, customize later
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
+
+antora:
+  extensions:
+    - require: "@antora/lunr-extension"
+      index_latest_only: true
+      languages: [en, es]
+
+asciidoc:
+  attributes:
+    # Suppress warnings for intentional placeholders
+    attribute-missing: skip
+    # Global attributes
+    page-pagination: ""
+    hide-uri-scheme: ""
+    tabs-sync-option: ""
+    # Kroki diagrams (optional - enable when ready)
+    # kroki-server-url: https://kroki.io
+    # kroki-fetch-diagram: true
+  extensions:
+    - "@asciidoctor/tabs"
+    # - "asciidoctor-kroki"  # Enable when diagrams are needed
+
+output:
+  dir: ./build/site
+  clean: true
+
+runtime:
+  fetch: true
+  cache_dir: .cache/antora

@@ -1,0 +1,28 @@
+* xref:index.adoc[Home]
+* xref:about.adoc[About]
+
+* Technology
+** xref:technology/index.adoc[Overview]
+// ** xref:technology::index.adoc[Full Technology Docs] (when spoke is ready)
+
+* Literature
+** xref:literature/index.adoc[Overview]
+** xref:literature/cervantes.adoc[Cervantes]
+** xref:literature/garcia-marquez.adoc[García Márquez]
+** xref:literature/reina-valera.adoc[Reina Valera]
+
+* Mathematics
+** xref:mathematics/index.adoc[Overview]
+
+* Music
+** xref:music/index.adoc[Overview]
+
+* Languages
+** xref:languages/index.adoc[Overview]
+** xref:languages/spanish-journey.adoc[Spanish B2→C2]
+
+* Philosophy
+** xref:philosophy/index.adoc[Overview]
+
+.Languages / Idiomas
+* xref:lang/es/index.adoc[Español]

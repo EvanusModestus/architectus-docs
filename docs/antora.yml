@@ -1,0 +1,113 @@
+name: home
+title: Architectus
+version: '2026'
+start_page: ROOT:index.adoc
+nav:
+  - modules/ROOT/nav.adoc
+
+asciidoc:
+  attributes:
+    # ========================================================================
+    # DOCUMENT METADATA
+    # ========================================================================
+    doc-id: ARCHITECTUS-HOME
+    revdate: '2026-02-17'
+    author: Architectus
+
+    # ========================================================================
+    # ASCIIDOC SETTINGS
+    # ========================================================================
+    icons: font
+    source-highlighter: highlight.js
+    experimental: ''
+    # Enable attribute substitution in code blocks
+    subs-attributes: attributes+
+
+    # ========================================================================
+    # SITE CONFIGURATION
+    # ========================================================================
+    site-title: Architectus
+    site-url: https://docs.architectus.dev
+    site-domain: architectus.dev
+
+    # ========================================================================
+    # AUTHOR INFORMATION (Public-safe)
+    # ========================================================================
+    author-name: Architectus
+    author-role: Senior Infrastructure Security Engineer
+    author-focus: Systems Architecture, Security, Automation
+
+    # ========================================================================
+    # LANGUAGE CONFIGURATION
+    # ========================================================================
+    lang-en: English
+    lang-es: Español
+    default-lang: en
+
+    # ========================================================================
+    # CONTENT CATEGORIES
+    # ========================================================================
+    cat-technology: Technology
+    cat-security: Security
+    cat-automation: Automation
+    cat-literature: Literature
+    cat-mathematics: Mathematics
+    cat-music: Music
+    cat-languages: Languages
+    cat-philosophy: Philosophy
+
+    # ========================================================================
+    # SPANISH LITERATURE REFERENCES
+    # ========================================================================
+    # Cervantes
+    book-quijote: El ingenioso hidalgo don Quijote de la Mancha
+    book-quijote-short: Don Quijote
+    author-cervantes: Miguel de Cervantes Saavedra
+
+    # García Márquez
+    book-cien-anos: Cien años de soledad
+    book-amor-tiempos: El amor en los tiempos del cólera
+    book-cronica: Crónica de una muerte anunciada
+    author-gabo: Gabriel García Márquez
+
+    # Reina Valera
+    book-rv: Santa Biblia Reina Valera
+    book-rv-year: 1960
+
+    # ========================================================================
+    # TECHNOLOGY DOMAINS
+    # ========================================================================
+    tech-linux: Linux
+    tech-windows: Windows
+    tech-networking: Networking
+    tech-security: Security
+    tech-automation: Automation
+    tech-cloud: Cloud
+    tech-containers: Containers
+    tech-ai: Artificial Intelligence
+
+    # ========================================================================
+    # CERTIFICATIONS (Public)
+    # ========================================================================
+    cert-cissp: CISSP
+    cert-ccnp: CCNP Security
+    cert-dele: DELE
+    cert-siele: SIELE
+
+    # ========================================================================
+    # QUOTES (for use in documents)
+    # ========================================================================
+    quote-quijote-identity: "Yo sé quién soy, y sé que puedo ser..."
+    quote-quijote-giants: "La aventura de los molinos de viento"
+
+    # ========================================================================
+    # IMAGES AND DIAGRAMS
+    # ========================================================================
+    imagesdir: images
+    diagramsdir: images/diagrams
+
+    # ========================================================================
+    # EXTERNAL LINKS
+    # ========================================================================
+    link-github: https://github.com/EvanusModestus
+    link-gitlab: https://gitlab.com/EvanusModestus

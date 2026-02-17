@@ -1,0 +1,60 @@
+= Miguel de Cervantes Saavedra
+:description: Analysis and notes on Cervantes and Don Quijote
+:navtitle: Cervantes
+
+[.lead]
+_{book-quijote}_ — the first modern novel, and an inexhaustible source of wisdom.
+
+== The Work
+
+Published in two parts (1605, 1615), Don Quijote tells the story of a man who reads so many chivalric romances that he loses his grip on reality — or perhaps gains a grip on a deeper reality.
+
+[quote, Don Quijote, Part I Chapter 1]
+____
+En un lugar de la Mancha, de cuyo nombre no quiero acordarme...
+____
+
+== Key Themes
+
+=== Identity
+
+[quote, Don Quijote]
+____
+{quote-quijote-identity}
+____
+
+Who are we? Who can we become? Quijote asserts his identity against a world that sees him as mad. Yet his madness is often wiser than the sanity of those who mock him.
+
+=== Idealism vs. Reality
+
+The windmills are not giants. But is it better to see windmills or to see giants? Cervantes never fully answers this question — he lets it haunt the reader.
+
+=== The Power of Stories
+
+Quijote is transformed by the books he reads. He becomes proof that stories shape reality, that imagination has power over matter.
+
+== Reading Notes
+
+// Add your reading notes here as you progress through the text
+
+[cols="1,2,2"]
+|===
+|Chapter |Summary |Reflections
+
+|Part I, Ch. 1
+|Introduction to Alonso Quijano and his transformation
+|_Notes coming_
+
+|Part I, Ch. 8
+|{quote-quijote-giants}
+|_Notes coming_
+|===
+
+== Quotes Collection
+
+// Add meaningful quotes as you encounter them
+
+== Related
+
+* xref:literature/index.adoc[Literature Overview]
+* xref:languages/spanish-journey.adoc[Spanish Language Journey]

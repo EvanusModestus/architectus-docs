@@ -1,0 +1,65 @@
+= Languages / Idiomas
+:description: Language learning journey, focusing on Spanish B2→C2
+:navtitle: Languages
+
+[.lead]
+Language as the architecture of thought across cultures.
+
+== Spanish Journey
+
+Primary focus: achieving mastery of Spanish, from B2 to C2 level.
+
+* xref:languages/spanish-journey.adoc[Spanish B2→C2 Journey]
+
+== Why Spanish?
+
+* **Literature access** — Reading Cervantes, García Márquez, Borges in original
+* **Cultural bridge** — Connecting with panhispánico world
+* **Professional** — Serving Spanish-speaking communities
+* **Personal** — The joy of another world of expression
+
+== Certifications
+
+[cols="1,2"]
+|===
+|Certification |Description
+
+|**{cert-dele}**
+|Diploma de Español como Lengua Extranjera (Instituto Cervantes)
+
+|**{cert-siele}**
+|Servicio Internacional de Evaluación de la Lengua Española
+|===
+
+== Current Status
+
+[cols="1,1,1"]
+|===
+|Level |Status |Date
+
+|B1
+|✓ Achieved
+|—
+
+|B2
+|✓ Achieved
+|2026
+
+|C1
+|In Progress
+|—
+
+|C2
+|Target
+|—
+|===
+
+== Resources
+
+// Add language learning resources
+
+== Related
+
+* xref:literature/index.adoc[Literature] — Reading in Spanish
+* xref:literature/cervantes.adoc[Cervantes]
+* xref:literature/garcia-marquez.adoc[García Márquez]

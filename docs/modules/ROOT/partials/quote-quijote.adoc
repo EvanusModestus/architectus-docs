@@ -1,0 +1,4 @@
+[quote, Don Quijote, {author-cervantes}]
+____
+{quote-quijote-identity}
+____

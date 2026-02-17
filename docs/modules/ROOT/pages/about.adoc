@@ -1,0 +1,45 @@
+= About Architectus
+:description: The builder behind the site
+:navtitle: About
+
+[.lead]
+Senior infrastructure security engineer with a passion for systems thinking across multiple domains.
+
+== Professional Focus
+
+* **Network Security**: 802.1X, NAC, firewall architecture, segmentation
+* **Identity & Access**: PKI, certificates, RADIUS, Active Directory
+* **Automation**: Python, PowerShell, Bash, infrastructure as code
+* **Documentation**: Docs-as-code, Antora, AsciiDoc
+
+== Beyond Technology
+
+Technology is one lens. This site also explores:
+
+* **Literature**: Spanish Golden Age, Latin American magical realism, sacred texts
+* **Mathematics**: Foundational understanding, pattern recognition
+* **Music**: Theory, composition, the architecture of sound
+* **Languages**: Spanish mastery (B2→C2), bridging cultures
+
+== Philosophy
+
+I believe in:
+
+* **Excellence as worship** — doing things well because it matters
+* **Integration over fragmentation** — seeing connections across domains
+* **Generosity of knowledge** — sharing what I learn freely
+* **Humility before complexity** — there's always more to understand
+
+== This Site
+
+Built with:
+
+* https://antora.org[Antora] — multi-repo documentation platform
+* https://asciidoc.org[AsciiDoc] — semantic documentation format
+* https://pages.cloudflare.com[Cloudflare Pages] — global deployment
+
+Source available on {link-github}[GitHub].
+
+== Contact
+
+For professional inquiries, connect via GitHub or GitLab.

@@ -1,0 +1,68 @@
+= Architectus Documentation Hub
+:description: Public knowledge base spanning technology, literature, mathematics, music, and languages
+:url-site: https://docs.architectus.dev
+
+== Overview
+
+*Architectus* is a public documentation site covering:
+
+* **Technology** — Infrastructure, security, networking, automation, cloud, AI
+* **Literature** — Cervantes, García Márquez, Reina Valera
+* **Mathematics** — Foundations, applications, patterns
+* **Music** — Theory, composition, projects
+* **Languages** — Spanish B2→C2 journey
+* **Philosophy** — Faith, reason, worldview
+
+== Architecture
+
+Hub-and-spoke model using Antora:
+
+[source,text]
+----
+architectus-docs (hub)
+├── architectus-technology (spoke)
+├── architectus-literature (spoke)
+├── architectus-mathematics (spoke)
+├── architectus-music (spoke)
+└── architectus-languages (spoke)
+----
+
+== Build
+
+[source,bash]
+----
+# Install dependencies
+npm install
+
+# Build site
+make
+
+# Build and serve locally
+make serve
+----
+
+== Structure
+
+[source,text]
+----
+architectus-docs/
+├── antora-playbook.yml    # Site playbook
+├── docs/
+│   ├── antora.yml         # Home component descriptor
+│   └── modules/ROOT/
+│       ├── nav.adoc       # Navigation
+│       ├── pages/         # Content
+│       ├── partials/      # Reusable snippets
+│       ├── examples/      # Code examples
+│       └── images/        # Images and diagrams
+├── Makefile               # Build commands
+└── package.json           # Dependencies
+----
+
+== Bilingual
+
+Site available in English and Spanish. Literature section primarily in Spanish.
+
+== License
+
+Content is personal documentation. All rights reserved unless otherwise noted.

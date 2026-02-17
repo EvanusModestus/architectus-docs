@@ -1,0 +1,18 @@
+{
+  "name": "architectus-docs",
+  "version": "1.0.0",
+  "description": "Architectus Public Documentation Hub",
+  "private": true,
+  "scripts": {
+    "build": "antora antora-playbook.yml",
+    "preview": "antora antora-playbook.yml && cd build/site && python3 -m http.server 8000"
+  },
+  "dependencies": {
+    "@antora/cli": "^3.1.0",
+    "@antora/site-generator": "^3.1.0",
+    "@antora/lunr-extension": "^1.0.0-alpha.8",
+    "@asciidoctor/tabs": "^1.0.0-beta.6"
+  },
+  "author": "Architectus",
+  "license": "UNLICENSED"
+}

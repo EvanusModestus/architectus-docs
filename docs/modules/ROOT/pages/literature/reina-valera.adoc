@@ -1,0 +1,83 @@
+= Reina Valera
+:description: Study notes on the Spanish Bible
+:navtitle: Reina Valera
+
+[.lead]
+The {book-rv} ({book-rv-year}) — foundation of Spanish-language Christianity.
+
+== The Translation
+
+The Reina-Valera Bible is the Spanish equivalent of the King James Version in English. First translated by Casiodoro de Reina (1569), revised by Cipriano de Valera (1602), and updated through the centuries (most notably in 1960).
+
+== Study Approach
+
+This section documents study of Scripture as:
+
+1. **Literature** — Poetry, narrative, wisdom literature
+2. **History** — Ancient Near East, Israel, early church
+3. **Theology** — Systematic understanding of faith
+4. **Language** — Spanish vocabulary, idioms, phrasing
+5. **Life** — Application and meditation
+
+== Structure
+
+[cols="1,2"]
+|===
+|Section |Books
+
+|**Pentateuco**
+|Génesis, Éxodo, Levítico, Números, Deuteronomio
+
+|**Históricos**
+|Josué through Ester
+
+|**Poéticos**
+|Job, Salmos, Proverbios, Eclesiastés, Cantares
+
+|**Profetas Mayores**
+|Isaías, Jeremías, Lamentaciones, Ezequiel, Daniel
+
+|**Profetas Menores**
+|Oseas through Malaquías
+
+|**Evangelios**
+|Mateo, Marcos, Lucas, Juan
+
+|**Historia**
+|Hechos
+
+|**Epístolas Paulinas**
+|Romanos through Filemón
+
+|**Epístolas Generales**
+|Hebreos through Judas
+
+|**Profecía**
+|Apocalipsis
+|===
+
+== Study Notes
+
+// Add book-by-book study notes
+
+=== Salmos
+
+// Psalm study notes
+
+=== Proverbios
+
+// Proverbs study notes
+
+=== Evangelios
+
+// Gospel study notes
+
+== Key Passages
+
+// Collection of meaningful passages with reflection
+
+== Related
+
+* xref:literature/index.adoc[Literature Overview]
+* xref:philosophy/index.adoc[Philosophy]
+* xref:languages/spanish-journey.adoc[Spanish Language Journey]

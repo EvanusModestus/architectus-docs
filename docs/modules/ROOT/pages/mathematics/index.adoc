@@ -1,0 +1,52 @@
+= Mathematics
+:description: Foundations, applications, and the architecture of logic
+:navtitle: Mathematics
+
+[.lead]
+Mathematics as the language of pattern and structure.
+
+== Philosophy
+
+Mathematics is not merely calculation — it is the study of structure itself. The same patterns appear in:
+
+* Network topology
+* Musical harmony
+* Logical proof
+* System architecture
+
+Understanding mathematics deepens understanding everywhere.
+
+== Areas of Study
+
+[cols="1,2"]
+|===
+|Area |Focus
+
+|**Foundations**
+|Logic, set theory, proof techniques
+
+|**Algebra**
+|Abstract structures, linear algebra
+
+|**Analysis**
+|Limits, continuity, calculus
+
+|**Discrete Mathematics**
+|Graph theory, combinatorics, algorithms
+
+|**Applied**
+|Cryptography, statistics, modeling
+|===
+
+== Study Notes
+
+// Add study notes as you progress
+
+== Resources
+
+// Add recommended resources
+
+== Related
+
+* xref:technology/index.adoc[Technology] — Applied mathematics in systems
+* xref:philosophy/index.adoc[Philosophy] — Mathematics and truth

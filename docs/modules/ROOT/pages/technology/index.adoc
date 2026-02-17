@@ -1,0 +1,59 @@
+= Technology
+:description: Infrastructure, security, networking, automation, cloud, and AI
+:navtitle: Technology
+
+[.lead]
+Hands-on experience and methodologies across the technology landscape.
+
+== Domains
+
+[cols="1,2"]
+|===
+|Area |Topics
+
+|**{tech-linux}**
+|Administration, hardening, automation, distributions
+
+|**{tech-windows}**
+|Active Directory, PowerShell, Server administration
+
+|**{tech-networking}**
+|Routing, switching, firewalls, 802.1X, NAC
+
+|**{tech-security}**
+|IAM, PKI, certificates, hardening, threat hunting
+
+|**{tech-automation}**
+|Python, Bash, PowerShell, Ansible, IaC
+
+|**{tech-cloud}**
+|Azure, AWS, OCI, hybrid architectures
+
+|**{tech-containers}**
+|Docker, Podman, Kubernetes
+
+|**{tech-ai}**
+|AI tools, workflows, integrations
+|===
+
+== Approach
+
+Every guide here follows these principles:
+
+1. **Vendor-agnostic concepts first** — understand the "why" before the "how"
+2. **Vendor-specific implementation** — real commands, real configs
+3. **Verification steps** — always confirm before and after changes
+4. **Security by default** — TLS, least privilege, audit logging
+
+== Coming Soon
+
+This section will expand to include:
+
+* Linux EAP-TLS methodology
+* Network segmentation patterns
+* PKI architecture design
+* Automation frameworks
+* Cloud security posture
+
+// Link to full spoke when ready:
+// See xref:technology::index.adoc[Full Technology Documentation]

@@ -1,0 +1,61 @@
+= Gabriel García Márquez
+:description: Analysis and notes on Gabo and magical realism
+:navtitle: García Márquez
+
+[.lead]
+Nobel laureate, master of magical realism, voice of Latin America.
+
+== The Author
+
+Gabriel García Márquez (1927-2014), known as "Gabo," was a Colombian novelist, journalist, and Nobel Prize winner (1982). His work blends the magical with the mundane, history with myth.
+
+== Major Works
+
+=== {book-cien-anos} (1967)
+
+The founding text of magical realism. Seven generations of the Buendía family in the mythical town of Macondo. Time is circular, history repeats, solitude is destiny.
+
+[quote, {author-gabo}, {book-cien-anos}]
+____
+Muchos años después, frente al pelotón de fusilamiento, el coronel Aureliano Buendía había de recordar aquella tarde remota en que su padre lo llevó a conocer el hielo.
+____
+
+=== {book-amor-tiempos} (1985)
+
+Love that spans fifty years. The persistence of passion against time, convention, and death itself.
+
+=== {book-cronica} (1981)
+
+A murder foretold, yet unstoppable. The mechanics of fate, honor, and collective guilt.
+
+== Themes
+
+=== Solitude (Soledad)
+
+The defining condition of the Buendía family — and perhaps of Latin America itself. Solitude as both curse and consequence.
+
+=== Time
+
+Linear time is an illusion. The past is present, the future is past, and everything that will happen has already happened.
+
+=== Magic in the Mundane
+
+Ice is magical to those who have never seen it. The "magical" in magical realism is often just reality seen with fresh eyes.
+
+== Reading Notes
+
+// Add your notes as you read
+
+[cols="1,2,2"]
+|===
+|Work |Chapter/Section |Reflections
+
+|{book-cien-anos}
+|Opening
+|_Notes coming_
+|===
+
+== Related
+
+* xref:literature/index.adoc[Literature Overview]
+* xref:languages/spanish-journey.adoc[Spanish Language Journey]
