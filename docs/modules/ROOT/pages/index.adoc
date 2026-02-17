@@ -1,7 +1,6 @@
 = Architectus
 :description: Master Builder - A knowledge base spanning technology, literature, mathematics, music, and languages
 :keywords: security, infrastructure, automation, literature, mathematics, spanish
-:page-layout: home
 
 [.lead]
 *Architectus* — Latin for "master builder." This site documents a journey of building: systems, understanding, and meaning.

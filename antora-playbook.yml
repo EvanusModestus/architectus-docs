@@ -88,12 +88,12 @@ asciidoc:
     page-pagination: ""
     hide-uri-scheme: ""
     tabs-sync-option: ""
-    # Kroki diagrams (optional - enable when ready)
-    # kroki-server-url: https://kroki.io
-    # kroki-fetch-diagram: true
+    # Kroki diagrams - use public Kroki server for CI, local for dev
+    kroki-server-url: https://kroki.io
+    kroki-fetch-diagram: true
   extensions:
     - "@asciidoctor/tabs"
-    # - "asciidoctor-kroki"  # Enable when diagrams are needed
+    - "asciidoctor-kroki"
 
 output:
   dir: ./build/site

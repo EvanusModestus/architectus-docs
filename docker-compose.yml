@@ -1,0 +1,52 @@
+# ============================================================================
+# Kroki Diagram Server for Architectus Documentation
+# ============================================================================
+# Renders diagrams in AsciiDoc using asciidoctor-kroki extension.
+#
+# Supported formats: D2, Mermaid, PlantUML, Graphviz, and many more.
+#
+# Usage:
+#   docker compose up -d     # Start in background
+#   docker compose down      # Stop
+#   docker compose logs -f   # View logs
+#
+# Health check: curl http://localhost:18000/health
+# ============================================================================
+
+services:
+  kroki:
+    image: yuzutech/kroki
+    container_name: architectus-kroki
+    ports:
+      - "18000:8000"
+    environment:
+      - KROKI_MERMAID_HOST=mermaid
+      - KROKI_BPMN_HOST=bpmn
+      - KROKI_EXCALIDRAW_HOST=excalidraw
+    depends_on:
+      - mermaid
+      - bpmn
+      - excalidraw
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  mermaid:
+    image: yuzutech/kroki-mermaid
+    container_name: architectus-kroki-mermaid
+    expose:
+      - "8002"
+
+  bpmn:
+    image: yuzutech/kroki-bpmn
+    container_name: architectus-kroki-bpmn
+    expose:
+      - "8003"
+
+  excalidraw:
+    image: yuzutech/kroki-excalidraw
+    container_name: architectus-kroki-excalidraw
+    expose:
+      - "8004"
