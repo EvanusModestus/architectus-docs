@@ -1,28 +1,21 @@
 * xref:index.adoc[Home]
 * xref:about.adoc[About]
 
-* Technology
-** xref:technology/index.adoc[Overview]
-// ** xref:technology::index.adoc[Full Technology Docs] (when spoke is ready)
+.Technology
+* xref:linux::index.adoc[Linux]
+* xref:windows::index.adoc[Windows]
+* xref:networking::index.adoc[Networking]
+* xref:security::index.adoc[Security]
+* xref:automation::index.adoc[Automation]
+* xref:cloud::index.adoc[Cloud]
 
-* Literature
-** xref:literature/index.adoc[Overview]
-** xref:literature/cervantes.adoc[Cervantes]
-** xref:literature/garcia-marquez.adoc[García Márquez]
-** xref:literature/reina-valera.adoc[Reina Valera]
+.Humanities
+* xref:literature::index.adoc[Literature]
+* xref:languages::index.adoc[Languages]
+* xref:mathematics::index.adoc[Mathematics]
+* xref:music::index.adoc[Music]
+* xref:philosophy::index.adoc[Philosophy]
 
-* Mathematics
-** xref:mathematics/index.adoc[Overview]
-
-* Music
-** xref:music/index.adoc[Overview]
-
-* Languages
-** xref:languages/index.adoc[Overview]
-** xref:languages/spanish-journey.adoc[Spanish B2→C2]
-
-* Philosophy
-** xref:philosophy/index.adoc[Overview]
-
-.Languages / Idiomas
-* xref:lang/es/index.adoc[Español]
+.Exploration
+* xref:radio::index.adoc[Radio]
+* xref:navigation::index.adoc[Navigation]

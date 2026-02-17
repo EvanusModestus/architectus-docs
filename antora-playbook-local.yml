@@ -24,30 +24,60 @@ content:
       branches: HEAD
       start_path: docs
 
-    # Technology (IT, Security, Networking, Automation, Cloud, AI)
-    # - url: /home/evanusmodestus/atelier/_architectus/architectus-technology
-    #   branches: HEAD
-    #   start_path: docs/asciidoc
+    # Technology Spokes
+    - url: /home/evanusmodestus/atelier/_architectus/architectus-linux
+      branches: HEAD
+      start_path: docs/asciidoc
 
-    # Literature (Cervantes, García Márquez, Reina Valera)
-    # - url: /home/evanusmodestus/atelier/_architectus/architectus-literature
-    #   branches: HEAD
-    #   start_path: docs/asciidoc
+    - url: /home/evanusmodestus/atelier/_architectus/architectus-windows
+      branches: HEAD
+      start_path: docs/asciidoc
 
-    # Mathematics
-    # - url: /home/evanusmodestus/atelier/_architectus/architectus-mathematics
-    #   branches: HEAD
-    #   start_path: docs/asciidoc
+    - url: /home/evanusmodestus/atelier/_architectus/architectus-networking
+      branches: HEAD
+      start_path: docs/asciidoc
 
-    # Music
-    # - url: /home/evanusmodestus/atelier/_architectus/architectus-music
-    #   branches: HEAD
-    #   start_path: docs/asciidoc
+    - url: /home/evanusmodestus/atelier/_architectus/architectus-security
+      branches: HEAD
+      start_path: docs/asciidoc
 
-    # Languages (Spanish B2→C2 journey)
-    # - url: /home/evanusmodestus/atelier/_architectus/architectus-languages
-    #   branches: HEAD
-    #   start_path: docs/asciidoc
+    - url: /home/evanusmodestus/atelier/_architectus/architectus-automation
+      branches: HEAD
+      start_path: docs/asciidoc
+
+    - url: /home/evanusmodestus/atelier/_architectus/architectus-cloud
+      branches: HEAD
+      start_path: docs/asciidoc
+
+    # Humanities Spokes
+    - url: /home/evanusmodestus/atelier/_architectus/architectus-literature
+      branches: HEAD
+      start_path: docs/asciidoc
+
+    - url: /home/evanusmodestus/atelier/_architectus/architectus-languages
+      branches: HEAD
+      start_path: docs/asciidoc
+
+    - url: /home/evanusmodestus/atelier/_architectus/architectus-mathematics
+      branches: HEAD
+      start_path: docs/asciidoc
+
+    - url: /home/evanusmodestus/atelier/_architectus/architectus-music
+      branches: HEAD
+      start_path: docs/asciidoc
+
+    - url: /home/evanusmodestus/atelier/_architectus/architectus-philosophy
+      branches: HEAD
+      start_path: docs/asciidoc
+
+    # Special Interest Spokes
+    - url: /home/evanusmodestus/atelier/_architectus/architectus-radio
+      branches: HEAD
+      start_path: docs/asciidoc
+
+    - url: /home/evanusmodestus/atelier/_architectus/architectus-navigation
+      branches: HEAD
+      start_path: docs/asciidoc
 
 ui:
   bundle:

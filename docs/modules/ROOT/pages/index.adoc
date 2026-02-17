@@ -1,38 +1,79 @@
 = Architectus
-:description: Master Builder - A knowledge base spanning technology, literature, mathematics, music, and languages
-:keywords: security, infrastructure, automation, literature, mathematics, spanish
+:description: Master Builder - A public knowledge base spanning technology, literature, mathematics, music, languages, and exploration
+:keywords: linux, security, infrastructure, automation, literature, mathematics, spanish, portuguese, radio, navigation
 
 [.lead]
 *Architectus* — Latin for "master builder." This site documents a journey of building: systems, understanding, and meaning.
 
-[quote, Miguel de Cervantes Saavedra, Don Quijote]
+[quote, {author-cervantes}, {book-quijote-short}]
 ____
 "{quote-quijote-identity}"
 ____
 
-== Domains of Knowledge
+== Technology
 
-[cols="1,2",options="header"]
+Building secure, resilient, and elegant systems.
+
+[cols="1,2"]
 |===
 |Domain |Focus
 
-|xref:technology/index.adoc[**{cat-technology}**]
-|Infrastructure, security, networking, automation, cloud, AI
+|xref:linux::index.adoc[**Linux**]
+|System administration, hardening, 802.1X, automation, distributions
 
-|xref:literature/index.adoc[**{cat-literature}**]
+|xref:windows::index.adoc[**Windows**]
+|Active Directory, PowerShell, GPO, 802.1X, server administration
+
+|xref:networking::index.adoc[**Networking**]
+|Routing, switching, firewalls, NAC, segmentation
+
+|xref:security::index.adoc[**Security**]
+|IAM, PKI, secrets management, hardening, compliance
+
+|xref:automation::index.adoc[**Automation**]
+|Python, Bash, Ansible, Terraform, CI/CD
+
+|xref:cloud::index.adoc[**Cloud**]
+|Azure, AWS, OCI, hybrid architectures
+|===
+
+== Humanities
+
+Understanding the architecture of narrative, thought, and meaning.
+
+[cols="1,2"]
+|===
+|Domain |Focus
+
+|xref:literature::index.adoc[**Literature**]
 |{author-cervantes}, {author-gabo}, {book-rv}
 
-|xref:mathematics/index.adoc[**{cat-mathematics}**]
+|xref:languages::index.adoc[**Languages**]
+|Spanish B2→C2, Portuguese A1→B2
+
+|xref:mathematics::index.adoc[**Mathematics**]
 |Foundations, applications, patterns
 
-|xref:music/index.adoc[**{cat-music}**]
-|Theory, composition, projects
+|xref:music::index.adoc[**Music**]
+|Theory, composition, production
 
-|xref:languages/index.adoc[**{cat-languages}**]
-|Spanish journey B2→C2, DELE/SIELE preparation
-
-|xref:philosophy/index.adoc[**{cat-philosophy}**]
+|xref:philosophy::index.adoc[**Philosophy**]
 |Faith, reason, worldview
+|===
+
+== Exploration
+
+Navigating the physical world and the electromagnetic spectrum.
+
+[cols="1,2"]
+|===
+|Domain |Focus
+
+|xref:radio::index.adoc[**Radio**]
+|Amateur radio, RF theory, ionospheric science, propagation
+
+|xref:navigation::index.adoc[**Navigation**]
+|Cartography, celestial navigation, land & sea navigation
 |===
 
 == Philosophy
@@ -41,33 +82,11 @@ This site represents the intersection of technical mastery and humanistic depth.
 
 === Why "Architectus"?
 
-The master builder doesn't just execute — they design, they understand structure, they see patterns across domains:
-
-* **Technology**: Building systems that are secure, resilient, and elegant
-* **Literature**: Understanding the architecture of narrative and meaning
-* **Mathematics**: Grasping the architecture of logic and proof
-* **Music**: Constructing architecture in sound
-* **Languages**: Bridging architectures of thought between cultures
+The master builder doesn't just execute — they design, understand structure, and see patterns across domains.
 
 === Bilingual / Bilingüe
 
 This site is available in both English and Spanish. Much of the literature section is in Spanish, reflecting the source texts.
-
-[.text-center]
-xref:lang/es/index.adoc[**Ver en Español**]
-
-== Recent Additions
-
-// This section will be populated as content is added
-
-[cols="1,2,1"]
-|===
-|Date |Topic |Category
-
-|2026-02-17
-|Site Launch
-|Home
-|===
 
 == Connect
 
