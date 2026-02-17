@@ -1,26 +1,11 @@
 # ============================================================================
-# Architectus - Public Knowledge Base Playbook
+# Architectus Documentation - CI/CD Playbook
 # ============================================================================
-# Central orchestration for public documentation and knowledge sharing.
+# Uses GitHub URLs for CI/CD builds.
+# For local development, use antora-playbook-local.yml
 #
-# Components:
-#   - home: Landing page and site navigation (this repo)
-#   - technology: IT, security, networking, automation, cloud, AI
-#   - literature: Don Quijote, García Márquez, Reina Valera, classics
-#   - mathematics: Foundations, applications, study notes
-#   - music: Theory, compositions, projects
-#   - languages: Spanish journey B2→C2, resources
-#
-# Bilingual: English (en) and Spanish (es)
-#
-# Usage:
+# Usage (CI):
 #   npx antora antora-playbook.yml
-#   # or
-#   make
-#
-# Maintainer: Architectus
-# Repository: architectus-docs
-# Site: https://docs.architectus.dev
 # ============================================================================
 
 site:
@@ -28,72 +13,93 @@ site:
   url: https://docs.architectus.dev
   start_page: home::index.adoc
   keys:
-    google_analytics: "" # Add if needed
+    google_analytics: ''
 
 content:
   sources:
     # Hub/Home (this repo)
-    - url: .
-      branches: HEAD
+    - url: https://github.com/EvanusModestus/architectus-docs
+      branches: main
       start_path: docs
-      edit_url: false
 
-    # Technology (IT, Security, Networking, Automation, Cloud, AI)
-    # - url: https://github.com/EvanusModestus/architectus-technology
-    #   branches: main
-    #   start_path: docs/asciidoc
-    #   edit_url: false
+    # Technology Spokes
+    - url: https://github.com/EvanusModestus/architectus-linux
+      branches: main
+      start_path: docs/asciidoc
 
-    # Literature (Cervantes, García Márquez, Reina Valera)
-    # - url: https://github.com/EvanusModestus/architectus-literature
-    #   branches: main
-    #   start_path: docs/asciidoc
-    #   edit_url: false
+    - url: https://github.com/EvanusModestus/architectus-windows
+      branches: main
+      start_path: docs/asciidoc
 
-    # Mathematics
-    # - url: https://github.com/EvanusModestus/architectus-mathematics
-    #   branches: main
-    #   start_path: docs/asciidoc
-    #   edit_url: false
+    - url: https://github.com/EvanusModestus/architectus-networking
+      branches: main
+      start_path: docs/asciidoc
 
-    # Music
-    # - url: https://github.com/EvanusModestus/architectus-music
-    #   branches: main
-    #   start_path: docs/asciidoc
-    #   edit_url: false
+    - url: https://github.com/EvanusModestus/architectus-security
+      branches: main
+      start_path: docs/asciidoc
 
-    # Languages (Spanish B2→C2 journey)
-    # - url: https://github.com/EvanusModestus/architectus-languages
-    #   branches: main
-    #   start_path: docs/asciidoc
-    #   edit_url: false
+    - url: https://github.com/EvanusModestus/architectus-automation
+      branches: main
+      start_path: docs/asciidoc
+
+    - url: https://github.com/EvanusModestus/architectus-cloud
+      branches: main
+      start_path: docs/asciidoc
+
+    # Humanities Spokes
+    - url: https://github.com/EvanusModestus/architectus-literature
+      branches: main
+      start_path: docs/asciidoc
+
+    - url: https://github.com/EvanusModestus/architectus-languages
+      branches: main
+      start_path: docs/asciidoc
+
+    - url: https://github.com/EvanusModestus/architectus-mathematics
+      branches: main
+      start_path: docs/asciidoc
+
+    - url: https://github.com/EvanusModestus/architectus-music
+      branches: main
+      start_path: docs/asciidoc
+
+    - url: https://github.com/EvanusModestus/architectus-philosophy
+      branches: main
+      start_path: docs/asciidoc
+
+    # Exploration Spokes
+    - url: https://github.com/EvanusModestus/architectus-radio
+      branches: main
+      start_path: docs/asciidoc
+
+    - url: https://github.com/EvanusModestus/architectus-navigation
+      branches: main
+      start_path: docs/asciidoc
 
 ui:
   bundle:
-    # UI bundle fetched by build.sh with Access auth
-    url: ./ui-bundle.zip
+    url: https://github.com/EvanusModestus/domus-antora-ui/releases/latest/download/ui-bundle.zip
     snapshot: true
 
 antora:
   extensions:
-    - require: "@antora/lunr-extension"
+    - require: '@antora/lunr-extension'
       index_latest_only: true
       languages: [en, es, pt]
 
 asciidoc:
   attributes:
-    # Suppress warnings for intentional placeholders
     attribute-missing: skip
-    # Global attributes
-    page-pagination: ""
-    hide-uri-scheme: ""
-    tabs-sync-option: ""
-    # Kroki server URL (local Docker container)
-    kroki-server-url: http://localhost:18000
+    page-pagination: ''
+    hide-uri-scheme: ''
+    tabs-sync-option: ''
+    # Kroki via public API for CI
+    kroki-server-url: https://kroki.io
     kroki-fetch-diagram: true
   extensions:
-    - "@asciidoctor/tabs"
-    - "asciidoctor-kroki"
+    - '@asciidoctor/tabs'
+    - asciidoctor-kroki
 
 output:
   dir: ./build/site
