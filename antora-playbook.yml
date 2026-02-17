@@ -79,7 +79,7 @@ content:
 
 ui:
   bundle:
-    url: https://github.com/EvanusModestus/domus-antora-ui/releases/latest/download/ui-bundle.zip
+    url: https://github.com/EvanusModestus/architectus-antora-ui/releases/latest/download/ui-bundle.zip
     snapshot: true
 
 antora:
