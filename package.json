@@ -1,19 +1,29 @@
 {
   "name": "architectus-docs",
   "version": "1.0.0",
-  "description": "Architectus Public Documentation Hub",
-  "private": true,
+  "description": "Architectus Public Documentation Hub - Unified Antora Site",
   "scripts": {
-    "build": "antora antora-playbook.yml",
-    "preview": "antora antora-playbook.yml && cd build/site && python3 -m http.server 8000"
+    "build": "./build.sh",
+    "build:local": "antora antora-playbook-local.yml",
+    "preview": "npx serve build/site"
   },
-  "dependencies": {
-    "@antora/cli": "^3.1.0",
-    "@antora/site-generator": "^3.1.0",
-    "@antora/lunr-extension": "^1.0.0-alpha.8",
-    "@asciidoctor/tabs": "^1.0.0-beta.6",
-    "asciidoctor-kroki": "^0.18.0"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EvanusModestus/architectus-docs.git"
   },
   "author": "Architectus",
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
+  "private": true,
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/EvanusModestus/architectus-docs/issues"
+  },
+  "homepage": "https://docs.architectus.dev",
+  "dependencies": {
+    "@antora/cli": "^3.1.9",
+    "@antora/site-generator": "^3.1.9",
+    "@antora/lunr-extension": "^1.0.0-alpha.13",
+    "@asciidoctor/tabs": "^1.0.0-beta.6",
+    "asciidoctor-kroki": "^0.18.1"
+  }
 }

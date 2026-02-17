@@ -42,6 +42,7 @@ asciidoc:
     # ========================================================================
     lang-en: English
     lang-es: Español
+    lang-pt: Português
     default-lang: en
 
     # ========================================================================
@@ -93,6 +94,8 @@ asciidoc:
     cert-ccnp: CCNP Security
     cert-dele: DELE
     cert-siele: SIELE
+    cert-celpe-bras: Celpe-Bras
+    cert-caple: CAPLE
 
     # ========================================================================
     # QUOTES (for use in documents)

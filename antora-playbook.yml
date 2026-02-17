@@ -70,15 +70,15 @@ content:
 
 ui:
   bundle:
-    # Use default Antora UI for now, customize later
-    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+    # UI bundle fetched by build.sh with Access auth
+    url: ./ui-bundle.zip
     snapshot: true
 
 antora:
   extensions:
     - require: "@antora/lunr-extension"
       index_latest_only: true
-      languages: [en, es]
+      languages: [en, es, pt]
 
 asciidoc:
   attributes:
@@ -88,8 +88,8 @@ asciidoc:
     page-pagination: ""
     hide-uri-scheme: ""
     tabs-sync-option: ""
-    # Kroki diagrams - use public Kroki server for CI, local for dev
-    kroki-server-url: https://kroki.io
+    # Kroki server URL (local Docker container)
+    kroki-server-url: http://localhost:18000
     kroki-fetch-diagram: true
   extensions:
     - "@asciidoctor/tabs"

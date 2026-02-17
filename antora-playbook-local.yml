@@ -1,0 +1,84 @@
+# ============================================================================
+# Architectus Documentation - LOCAL Development Playbook
+# ============================================================================
+# Uses local filesystem paths for fast iteration.
+# For CI/CD, use antora-playbook.yml with GitHub URLs + credentials.
+#
+# Usage:
+#   npx antora antora-playbook-local.yml
+#   # or
+#   make local
+# ============================================================================
+
+site:
+  title: Architectus
+  url: https://docs.architectus.dev
+  start_page: home::index.adoc
+  keys:
+    google_analytics: ''
+
+content:
+  sources:
+    # Hub/Home (this repo)
+    - url: /home/evanusmodestus/atelier/_architectus/architectus-docs
+      branches: HEAD
+      start_path: docs
+
+    # Technology (IT, Security, Networking, Automation, Cloud, AI)
+    # - url: /home/evanusmodestus/atelier/_architectus/architectus-technology
+    #   branches: HEAD
+    #   start_path: docs/asciidoc
+
+    # Literature (Cervantes, García Márquez, Reina Valera)
+    # - url: /home/evanusmodestus/atelier/_architectus/architectus-literature
+    #   branches: HEAD
+    #   start_path: docs/asciidoc
+
+    # Mathematics
+    # - url: /home/evanusmodestus/atelier/_architectus/architectus-mathematics
+    #   branches: HEAD
+    #   start_path: docs/asciidoc
+
+    # Music
+    # - url: /home/evanusmodestus/atelier/_architectus/architectus-music
+    #   branches: HEAD
+    #   start_path: docs/asciidoc
+
+    # Languages (Spanish B2→C2 journey)
+    # - url: /home/evanusmodestus/atelier/_architectus/architectus-languages
+    #   branches: HEAD
+    #   start_path: docs/asciidoc
+
+ui:
+  bundle:
+    # Use domus-antora-ui for now (create architectus-antora-ui later if needed)
+    url: /home/evanusmodestus/atelier/_bibliotheca/domus-antora-ui/build/ui-bundle.zip
+    snapshot: true
+
+antora:
+  extensions:
+    - require: '@antora/lunr-extension'
+      index_latest_only: true
+      languages: [en, es, pt]
+
+asciidoc:
+  attributes:
+    # Suppress warnings for intentional placeholders
+    attribute-missing: skip
+    page-pagination: ''
+    hide-uri-scheme: ''
+    tabs-sync-option: ''
+    # Kroki server for diagram rendering (local Docker)
+    kroki-server-url: http://localhost:18000
+    kroki-fetch-diagram: true
+  extensions:
+    - '@asciidoctor/tabs'
+    - asciidoctor-kroki
+
+output:
+  dir: ./build/site
+  clean: true
+
+runtime:
+  fetch: true
+  cache_dir: .cache/antora

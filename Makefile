@@ -40,9 +40,8 @@ D2 := d2
 MMDC := mmdc
 DOT := dot
 
-# Default target
-all: diagrams site
-	@echo -e "$(GREEN)$(BOLD)Build complete: $(BUILD_DIR)/index.html$(NC)"
+# Default target (uses local paths for development, stops Kroki after)
+all: diagrams local kroki-stop
 
 # ============================================================================
 # Kroki Diagram Server
@@ -68,7 +67,7 @@ kroki:
 # Stop Kroki containers
 kroki-stop:
 	@echo -e "$(YELLOW)Stopping Kroki diagram server...$(NC)"
-	@docker compose down 2>/dev/null || true
+	@docker compose down
 	@echo -e "$(GREEN)Kroki stopped$(NC)"
 
 # Check Kroki status
@@ -85,32 +84,28 @@ kroki-status:
 # Documentation Site
 # ============================================================================
 
-# Standard build
-site: $(PLAYBOOK)
-	@echo -e "$(CYAN)Building documentation site...$(NC)"
+# Local build (for development - uses filesystem paths)
+local: kroki $(PLAYBOOK_LOCAL)
+	@echo -e "$(CYAN)Building documentation site (local paths)...$(NC)"
+	@npx antora $(PLAYBOOK_LOCAL)
+	@echo -e "$(GREEN)$(BOLD)Site built: $(BUILD_DIR)/index.html$(NC)"
+
+# CI build (uses GitHub URLs - requires credentials)
+site: kroki $(PLAYBOOK)
+	@echo -e "$(CYAN)Building unified documentation site (GitHub)...$(NC)"
 	@npx antora $(PLAYBOOK)
 	@echo -e "$(GREEN)$(BOLD)Site built: $(BUILD_DIR)/index.html$(NC)"
 
-# Local build with Kroki
-local: kroki $(PLAYBOOK)
-	@echo -e "$(CYAN)Building documentation site (with Kroki)...$(NC)"
-	@npx antora $(PLAYBOOK)
-	@echo -e "$(GREEN)$(BOLD)Site built: $(BUILD_DIR)/index.html$(NC)"
-
-serve: diagrams site
+serve: diagrams local
 	@echo -e "$(BLUE)Serving documentation on http://localhost:8000...$(NC)"
 	@echo -e "$(YELLOW)Press Ctrl+C to stop$(NC)"
-	@cd $(BUILD_DIR) && python3 -m http.server 8000
+	@cd $(BUILD_DIR) && python3 -m http.server 8000; \
+		echo -e "$(YELLOW)Stopping Kroki...$(NC)" && $(MAKE) -s kroki-stop
 
 # Build and stop Kroki (for one-off builds - saves resources)
 build: diagrams local
 	@$(MAKE) kroki-stop
 	@echo -e "$(GREEN)Build complete. Kroki stopped.$(NC)"
-
-# Preview - build and open in browser
-preview: site
-	@echo -e "$(BLUE)Opening site in browser...$(NC)"
-	@xdg-open $(BUILD_DIR)/index.html 2>/dev/null || open $(BUILD_DIR)/index.html 2>/dev/null || echo "Open $(BUILD_DIR)/index.html manually"
 
 # ============================================================================
 # Diagram Rendering
@@ -121,7 +116,6 @@ diagrams: diagrams-d2 diagrams-mermaid diagrams-graphviz
 
 diagrams-d2:
 	@echo -e "$(CYAN)Rendering D2 diagrams...$(NC)"
-	@mkdir -p $(DIAGRAM_DIR)
 	@for f in $(DIAGRAM_DIR)/*.d2; do \
 		if [ -f "$$f" ]; then \
 			echo -e "  $(BLUE)→$(NC) $$f"; \
@@ -131,7 +125,6 @@ diagrams-d2:
 
 diagrams-mermaid:
 	@echo -e "$(CYAN)Rendering Mermaid diagrams...$(NC)"
-	@mkdir -p $(DIAGRAM_DIR)
 	@for f in $(DIAGRAM_DIR)/*.mmd; do \
 		if [ -f "$$f" ]; then \
 			echo -e "  $(BLUE)→$(NC) $$f"; \
@@ -141,7 +134,6 @@ diagrams-mermaid:
 
 diagrams-graphviz:
 	@echo -e "$(CYAN)Rendering Graphviz diagrams...$(NC)"
-	@mkdir -p $(DIAGRAM_DIR)
 	@for f in $(DIAGRAM_DIR)/*.dot; do \
 		if [ -f "$$f" ]; then \
 			echo -e "  $(BLUE)→$(NC) $$f"; \
@@ -165,7 +157,6 @@ check-deps:
 	@echo -n "  d2: " && $(D2) --version 2>/dev/null || echo -e "$(YELLOW)NOT FOUND (optional)$(NC)"
 	@echo -n "  mmdc: " && $(MMDC) --version 2>/dev/null || echo -e "$(YELLOW)NOT FOUND (optional)$(NC)"
 	@echo -n "  dot: " && $(DOT) -V 2>&1 | head -1 || echo -e "$(YELLOW)NOT FOUND (optional)$(NC)"
-	@echo -n "  docker: " && docker --version 2>/dev/null || echo -e "$(YELLOW)NOT FOUND (for Kroki)$(NC)"
 
 # ============================================================================
 # Help
@@ -175,13 +166,13 @@ help:
 	@echo -e "$(BOLD)Architectus Documentation Hub$(NC)"
 	@echo ""
 	@echo -e "$(BOLD)Site Build:$(NC)"
-	@echo -e "  $(GREEN)make$(NC)              Build unified site"
-	@echo -e "  $(GREEN)make build$(NC)        Build with Kroki, then stop Kroki"
-	@echo -e "  $(GREEN)make site$(NC)         Build Antora site only"
-	@echo -e "  $(GREEN)make local$(NC)        Build with Kroki running"
+	@echo -e "  $(GREEN)make$(NC)              Build unified site (Kroki stays running)"
+	@echo -e "  $(GREEN)make build$(NC)        Build and stop Kroki after (recommended)"
+	@echo -e "  $(GREEN)make site$(NC)         Build Antora site only (GitHub URLs)"
+	@echo -e "  $(GREEN)make local$(NC)        Build Antora site (local paths)"
 	@echo ""
 	@echo -e "$(BOLD)Kroki (Diagram Server):$(NC)"
-	@echo -e "  $(CYAN)make kroki$(NC)        Start Kroki containers"
+	@echo -e "  $(CYAN)make kroki$(NC)        Start Kroki containers (auto-starts with build)"
 	@echo -e "  $(CYAN)make kroki-stop$(NC)   Stop Kroki containers"
 	@echo -e "  $(CYAN)make kroki-status$(NC) Check if Kroki is running"
 	@echo ""
@@ -190,7 +181,6 @@ help:
 	@echo ""
 	@echo -e "$(BOLD)Development:$(NC)"
 	@echo -e "  $(BLUE)make serve$(NC)        Build and serve locally on :8000"
-	@echo -e "  $(BLUE)make preview$(NC)      Build and open in browser"
 	@echo ""
 	@echo -e "$(BOLD)Utilities:$(NC)"
 	@echo -e "  $(YELLOW)make clean$(NC)        Remove build artifacts"
@@ -198,7 +188,7 @@ help:
 	@echo -e "  $(YELLOW)make help$(NC)         This message"
 	@echo ""
 	@echo -e "$(BOLD)Content Domains:$(NC)"
-	@echo -e "  • Technology (IT, security, networking, automation)"
+	@echo -e "  • Technology (Linux, security, networking, automation)"
 	@echo -e "  • Literature (Cervantes, García Márquez, Reina Valera)"
 	@echo -e "  • Mathematics (foundations, applications)"
 	@echo -e "  • Music (theory, composition)"
