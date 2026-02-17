@@ -1,0 +1,52 @@
+# GitLab CI/CD for Architectus Documentation Hub
+# Builds Antora site and deploys to Cloudflare Pages
+#
+# Required CI/CD Variables (Settings → CI/CD → Variables):
+#   CLOUDFLARE_API_TOKEN    - API token with Pages:Edit permission
+#   CLOUDFLARE_ACCOUNT_ID   - Your Cloudflare account ID
+#   CF_PAGES_PROJECT        - Cloudflare Pages project name (e.g., "architectus")
+
+stages:
+  - build
+  - deploy
+
+variables:
+  NODE_VERSION: "20"
+
+# Cache node_modules between jobs
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - node_modules/
+
+build:
+  stage: build
+  image: node:${NODE_VERSION}
+  script:
+    - npm ci
+    - npx antora antora-playbook.yml
+  artifacts:
+    paths:
+      - build/site/
+    expire_in: 1 hour
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+    - if: $CI_PIPELINE_SOURCE == "trigger"
+
+deploy:
+  stage: deploy
+  image: node:${NODE_VERSION}
+  needs:
+    - build
+  script:
+    - npm install -g wrangler
+    - wrangler pages deploy build/site --project-name=${CF_PAGES_PROJECT:-architectus} --commit-dirty=true
+  environment:
+    name: production
+    url: https://docs.architectus.dev
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+    - if: $CI_PIPELINE_SOURCE == "trigger"
+
+# Triggered by spokes via API
+# curl -X POST -F "token=$TRIGGER_TOKEN" -F "ref=main" https://gitlab.com/api/v4/projects/$PROJECT_ID/trigger/pipeline
