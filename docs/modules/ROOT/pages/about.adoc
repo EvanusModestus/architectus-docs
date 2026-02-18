@@ -1,45 +1,73 @@
-= About Architectus
-:description: The builder behind the site
+= About
+:description: The engineer behind Architectus
 :navtitle: About
 
 [.lead]
-Senior infrastructure security engineer with a passion for systems thinking across multiple domains.
+Senior infrastructure security engineer building systems that work.
 
-== Professional Focus
+== What I Do
 
-* **Network Security**: 802.1X, NAC, firewall architecture, segmentation
-* **Identity & Access**: PKI, certificates, RADIUS, Active Directory
-* **Automation**: Python, PowerShell, Bash, infrastructure as code
-* **Documentation**: Docs-as-code, Antora, AsciiDoc
+I design and secure enterprise infrastructure—the kind that has to work at 3 AM when nobody's watching.
 
-== Beyond Technology
+[cols="1,2", frame=none, grid=none]
+|===
+|*Network Security*
+|802.1X, NAC, zero-trust segmentation, firewall architecture
 
-Technology is one lens. This site also explores:
+|*Identity & Access*
+|PKI, certificate lifecycle, RADIUS, Active Directory integration
 
-* **Literature**: Spanish Golden Age, Latin American magical realism, sacred texts
-* **Mathematics**: Foundational understanding, pattern recognition
-* **Music**: Theory, composition, the architecture of sound
-* **Languages**: Spanish mastery (B2→C2), bridging cultures
+|*Automation*
+|Python, PowerShell, Bash, Terraform, infrastructure as code
 
-== Philosophy
+|*Platform Engineering*
+|CI/CD pipelines, multi-forge strategies, docs-as-code
+|===
 
-I believe in:
+== Why This Site Exists
 
-* **Excellence as worship** — doing things well because it matters
-* **Integration over fragmentation** — seeing connections across domains
-* **Generosity of knowledge** — sharing what I learn freely
-* **Humility before complexity** — there's always more to understand
+Documentation should be treated like code—versioned, tested, and maintained.
 
-== This Site
+This site aggregates knowledge across 14 repositories using Antora's hub-spoke architecture. Content deploys automatically to Cloudflare Pages via GitHub Actions and GitLab CI. The same source builds to multiple forges for redundancy.
 
-Built with:
+It's also a personal forcing function. Writing clarifies thinking. Publishing creates accountability.
 
-* https://antora.org[Antora] — multi-repo documentation platform
-* https://asciidoc.org[AsciiDoc] — semantic documentation format
-* https://pages.cloudflare.com[Cloudflare Pages] — global deployment
+== Beyond the Terminal
 
-Source available on {link-github}[GitHub].
+Technology is one lens among many. This site also explores:
 
-== Contact
+* *Literature* — Spanish Golden Age, Latin American magical realism, sacred texts
+* *Mathematics* — Pattern recognition, foundational understanding
+* *Music* — Theory, composition, the architecture of sound
+* *Languages* — Spanish fluency, bridging cultures through words
 
-For professional inquiries, connect via GitHub or GitLab.
+== Principles
+
+* *Excellence as discipline* — Doing things well because the work deserves it
+* *Integration over fragmentation* — Finding connections across domains
+* *Generosity of knowledge* — What I learn, I share
+* *Humility before complexity* — There's always more to understand
+
+== Built With
+
+[cols="1,2", frame=none, grid=none]
+|===
+|https://antora.org[Antora]
+|Multi-repository documentation platform
+
+|https://asciidoc.org[AsciiDoc]
+|Semantic markup for technical writing
+
+|https://pages.cloudflare.com[Cloudflare Pages]
+|Global edge deployment
+
+|https://d2lang.com[D2]
+|Declarative diagrams
+|===
+
+== Connect
+
+* {link-github}[GitHub^] — Code and contributions
+* {link-gitlab}[GitLab^] — Mirror and CI/CD
+
+Open to interesting problems. If the work matters, I'm listening.
