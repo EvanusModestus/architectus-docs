@@ -81,8 +81,7 @@ content:
 
 ui:
   bundle:
-    # Use domus-antora-ui for now (create architectus-antora-ui later if needed)
-    url: /home/evanusmodestus/atelier/_bibliotheca/domus-antora-ui/build/ui-bundle.zip
+    url: /home/evanusmodestus/atelier/_architectus/architectus-antora-ui/build/ui-bundle.zip
     snapshot: true
 
 antora:
