@@ -2,9 +2,11 @@
 # Builds Antora site and deploys to Cloudflare Pages
 #
 # Required CI/CD Variables (Settings → CI/CD → Variables):
-#   CLOUDFLARE_API_TOKEN    - API token with Pages:Edit permission
+#   CLOUDFLARE_API_TOKEN    - API token with Pages:Edit (use ci-pages-deploy-only token)
 #   CLOUDFLARE_ACCOUNT_ID   - Your Cloudflare account ID
-#   CF_PAGES_PROJECT        - Cloudflare Pages project name (e.g., "architectus")
+#
+# Project: architectus-docs
+# Site: https://docs.architectus.dev
 
 stages:
   - build
@@ -40,7 +42,7 @@ deploy:
     - build
   script:
     - npm install -g wrangler
-    - wrangler pages deploy build/site --project-name=${CF_PAGES_PROJECT:-architectus} --commit-dirty=true
+    - wrangler pages deploy build/site --project-name=architectus-docs --commit-dirty=true
   environment:
     name: production
     url: https://docs.architectus.dev
