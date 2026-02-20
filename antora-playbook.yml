@@ -16,6 +16,7 @@ site:
     google_analytics: ''
 
 content:
+  edit_url: false
   sources:
     # Hub/Home (this repo)
     - url: https://github.com/EvanusModestus/architectus-docs
