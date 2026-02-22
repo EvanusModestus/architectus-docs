@@ -3,7 +3,7 @@
 # ============================================================================
 # Renders diagrams in AsciiDoc using asciidoctor-kroki extension.
 #
-# Supported formats: D2, Mermaid, PlantUML, Graphviz, and many more.
+# Supported formats: D2, Mermaid, PlantUML, Graphviz, ABC (music notation), and more.
 #
 # Usage:
 #   docker compose up -d     # Start in background
